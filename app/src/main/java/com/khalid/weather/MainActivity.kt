@@ -1,3 +1,12 @@
+/*
+welcome
+My name is Khaled Bassam Seyam from Palestine, I live in Saudi Arabia, Riyadh
+This program was developed by Khaled Bassam Seyam on 12/13/2021
+Github username: kbseyam
+Gmail: kbseyam@gmail.com
+Outlook: kbseyam@outlook.com
+ */
+
 package com.khalid.weather
 
 import android.annotation.SuppressLint
