@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/tv_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/img_ic"
+        app:layout_constraintEnd_toStartOf="@id/tv_country"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Riyadh" />
+
+    <TextView
+        android:id="@+id/tv_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_city"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_city"
+        tools:text="SA" />
+
+    <ImageView
+        android:id="@+id/img_ic"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toTopOf="@id/text_description"
+        app:layout_constraintEnd_toStartOf="@+id/tv_temp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_city"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/tv_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textSize="77sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_ic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_ic"
+        app:layout_constraintTop_toTopOf="@+id/img_ic"
+        tools:text="9°C" />
+
+    <TextView
+        android:id="@+id/text_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="description"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/text_feels_like"
+        app:layout_constraintEnd_toStartOf="@+id/tv_description"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_ic" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/text_description"
+        tools:text="Clear" />
+
+    <TextView
+        android:id="@+id/text_feels_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="feelsLike"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/text_wind"
+        app:layout_constraintEnd_toStartOf="@+id/tv_feels_like"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_description" />
+
+    <TextView
+        android:id="@+id/tv_feels_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_feels_like"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/text_feels_like"
+        tools:text="7°C" />
+
+    <TextView
+        android:id="@+id/text_wind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wind"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/text_pressure"
+        app:layout_constraintEnd_toStartOf="@+id/tv_wind"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/text_feels_like"
+        app:layout_constraintTop_toBottomOf="@+id/text_feels_like"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tv_wind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_wind"
+        app:layout_constraintEnd_toEndOf="@+id/tv_feels_like"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/text_wind"
+        tools:text="10 km/h" />
+
+    <TextView
+        android:id="@+id/text_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pressure"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/text_humidity"
+        app:layout_constraintEnd_toStartOf="@+id/tv_pressure"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/text_wind"
+        app:layout_constraintTop_toBottomOf="@+id/text_wind"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tv_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_pressure"
+        app:layout_constraintEnd_toEndOf="@+id/tv_wind"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/text_pressure"
+        tools:text="69" />
+
+    <TextView
+        android:id="@+id/text_humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="humidity"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_city"
+        app:layout_constraintEnd_toStartOf="@+id/tv_humidity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/text_pressure"
+        app:layout_constraintTop_toBottomOf="@+id/text_pressure"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tv_humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_humidity"
+        app:layout_constraintEnd_toEndOf="@+id/tv_pressure"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/text_humidity"
+        tools:text="46%" />
+
+    <Button
+        android:id="@+id/button_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:minHeight="48dp"
+        android:text="choose a city"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_humidity" />
+
+    <TextView
+        android:id="@+id/text_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:gravity="center"
+        android:text="Please choose a city first"
+        android:textSize="32sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
